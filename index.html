@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Degrees to Radians Converter</title>
+  </head>
+  <body>
+    <h1>Degrees to Radians Converter</h1>
+    <section class="inputs">
+      <input
+        type="number"
+        name="degrees"
+        id="degrees"
+        class="input"
+        placeholder="Input: degrees"
+      />
+      <br /><br /><br />
+      <input
+        type="number"
+        name="radians"
+        id="radians"
+        class="input"
+        placeholder="Output: radians"
+      />
+    </section>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        background: #d6abc5;
+      }
+
+      h1 {
+        font-family: "VT323", monospace;
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 40px;
+        letter-spacing: 2px;
+      }
+
+      .input {
+        font-family: "VT323", monospace;
+        margin-left: 90px;
+        margin-top: 40px;
+        padding: 15px;
+        letter-spacing: 2px;
+        font-size: 40px;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        background: #fde6f4;
+      }
+
+      .input:focus {
+        box-shadow: 0px 0px 8px 4px rgba(88, 27, 99, 0.4);
+      }
+    </style>
+    <script>
+      const degreeInput = document.getElementById("degrees");
+
+      console.log(degreeInput);
+
+      function convertToRadians() {
+        const degreeValue = document.getElementById("degrees").value;
+        let radianValue = degreeValue * (3.14 / 180);
+        document.getElementById("radians").value = radianValue;
+      }
+
+      degreeInput.addEventListener("input", convertToRadians);
+    </script>
+  </body>
+</html>
